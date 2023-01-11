@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtomSheetController" customModule="Simple_Weather" customModuleProvider="target">
+            <connections>
+                <outlet property="scrollView" destination="fFp-BH-cnX" id="Crz-Lc-ReM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gz6-2y-WXO">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lzT-p9-yyc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFp-BH-cnX">
+                                <rect key="frame" x="0.0" y="0.0" width="404" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="saT-QV-Q8t"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="ody-fE-m7j"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="T0c-DE-Xzd"/>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fFp-BH-cnX" secondAttribute="trailing" id="Afs-Rf-reK"/>
+                            <constraint firstItem="fFp-BH-cnX" firstAttribute="top" secondItem="lzT-p9-yyc" secondAttribute="top" id="MUz-fK-WQI"/>
+                            <constraint firstItem="fFp-BH-cnX" firstAttribute="leading" secondItem="lzT-p9-yyc" secondAttribute="leading" id="XtR-8y-w4o"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="regular"/>
+                </visualEffectView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gz6-2y-WXO" secondAttribute="bottom" id="EnE-4K-9Xu"/>
+                <constraint firstItem="gz6-2y-WXO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ObA-er-Se3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gz6-2y-WXO" secondAttribute="trailing" id="mbT-GI-qfp"/>
+                <constraint firstItem="gz6-2y-WXO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="r1i-rS-136"/>
+            </constraints>
+            <point key="canvasLocation" x="107.63358778625954" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

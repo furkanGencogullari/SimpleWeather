@@ -1,24 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Simple_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundGradient" translatesAutoresizingMaskIntoConstraints="NO" id="POV-LT-1hA" userLabel="backgroundGradient">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="1R0-N8-aYZ" userLabel="landscape">
+                                <rect key="frame" x="0.0" y="252" width="393" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="XrB-Oe-rGM"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fh-PP-lUq">
+                                <rect key="frame" x="333" y="79" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="WED-Xc-EOa"/>
+                                    <constraint firstAttribute="height" constant="40" id="m0e-Jx-IhK"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system">
+                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="myButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cTj-QA-1tE"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C7a-tm-h5g">
+                                <rect key="frame" x="20" y="79" width="303" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="0.27549329340852646" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3dJ-Jl-xQ2"/>
+                                </constraints>
+                                <color key="textColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="50I-FV-U93">
+                                <rect key="frame" x="110" y="199" width="173" height="220"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Tdo-3N-vr6">
+                                    <rect key="frame" x="0.0" y="0.0" width="173" height="220"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="nLW-mi-b4s">
+                                            <rect key="frame" x="46.33333333333335" y="41" width="80.666666666666686" height="138"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tYI-bY-UxW" userLabel="Degrees">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80.666666666666671" height="56"/>
+                                                    <fontDescription key="fontDescription" name="PingFangHK-Light" family="PingFang HK" pointSize="40"/>
+                                                    <color key="textColor" name="AccentColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gAI-Hx-BCn" userLabel="Condition">
+                                                    <rect key="frame" x="0.0" y="82" width="80.666666666666671" height="56"/>
+                                                    <fontDescription key="fontDescription" name="PingFangHK-Light" family="PingFang HK" pointSize="40"/>
+                                                    <color key="textColor" name="AccentColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="nLW-mi-b4s" firstAttribute="centerY" secondItem="Tdo-3N-vr6" secondAttribute="centerY" id="KwX-Cs-pNX"/>
+                                        <constraint firstItem="nLW-mi-b4s" firstAttribute="centerX" secondItem="Tdo-3N-vr6" secondAttribute="centerX" id="Lbd-jD-U2l"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="1Fu-HQ-7QH"/>
+                                </constraints>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.bolt.rain" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4hB-6F-oBy">
+                                <rect key="frame" x="60" y="145.66666666666666" width="110" height="111.66666666666671"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="60y-nJ-h0J"/>
+                                    <constraint firstAttribute="width" constant="110" id="KGj-Hw-6VB"/>
+                                    <constraint firstAttribute="width" secondItem="4hB-6F-oBy" secondAttribute="height" multiplier="1:1" id="dyL-us-MCX"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Antalya" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5Ps-HU-9pY" userLabel="city">
+                                <rect key="frame" x="202" y="419" width="105" height="26.666666666666686"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="Lci-KZ-rzp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="19"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1R0-N8-aYZ" secondAttribute="trailing" id="3zn-cr-hrw"/>
+                            <constraint firstAttribute="bottom" secondItem="POV-LT-1hA" secondAttribute="bottom" id="6Kd-mu-UmG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Ps-HU-9pY" secondAttribute="trailing" constant="86" id="713-Wk-LKi"/>
+                            <constraint firstItem="50I-FV-U93" firstAttribute="top" secondItem="C7a-tm-h5g" secondAttribute="bottom" constant="80" id="7Wo-iw-n4u"/>
+                            <constraint firstItem="9fh-PP-lUq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="9lk-8e-KmZ"/>
+                            <constraint firstItem="1R0-N8-aYZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ARr-ki-ZYD"/>
+                            <constraint firstItem="4hB-6F-oBy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="JOK-EG-nOs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9fh-PP-lUq" secondAttribute="trailing" constant="20" id="Kke-pQ-NEY"/>
+                            <constraint firstItem="4hB-6F-oBy" firstAttribute="top" secondItem="C7a-tm-h5g" secondAttribute="bottom" constant="27" id="RWf-Pw-aZR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="50I-FV-U93" secondAttribute="trailing" constant="110" id="Wpa-oh-sC9"/>
+                            <constraint firstItem="C7a-tm-h5g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xox-Ou-gm0"/>
+                            <constraint firstItem="5Ps-HU-9pY" firstAttribute="top" secondItem="50I-FV-U93" secondAttribute="bottom" id="bXw-7I-Ckq"/>
+                            <constraint firstItem="50I-FV-U93" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bu0-9S-TmV"/>
+                            <constraint firstAttribute="bottom" secondItem="1R0-N8-aYZ" secondAttribute="bottom" id="dNO-fy-zWj"/>
+                            <constraint firstItem="C7a-tm-h5g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="kTi-12-RsH"/>
+                            <constraint firstItem="50I-FV-U93" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="m9c-ol-aSW"/>
+                            <constraint firstItem="POV-LT-1hA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pUu-2v-qtT"/>
+                            <constraint firstItem="9fh-PP-lUq" firstAttribute="leading" secondItem="C7a-tm-h5g" secondAttribute="trailing" constant="10" id="qRl-6K-uNN"/>
+                            <constraint firstAttribute="trailing" secondItem="POV-LT-1hA" secondAttribute="trailing" id="r8Y-QF-t84"/>
+                            <constraint firstItem="POV-LT-1hA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rt2-H5-HgY"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blurView" destination="50I-FV-U93" id="ruG-5H-Brf"/>
+                        <outlet property="searchTextField" destination="C7a-tm-h5g" id="ICy-BN-X4T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backgroundGradient" width="360" height="852"/>
+        <image name="cloud.bolt.rain" catalog="system" width="122" height="128"/>
+        <image name="landscape" width="360" height="532"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <namedColor name="AccentColor">
+            <color red="0.99697250127792358" green="0.87525477198521107" blue="0.33823926276684696" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
