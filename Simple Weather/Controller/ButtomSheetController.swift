@@ -14,12 +14,20 @@ class ButtomSheetController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let height = view.frame.height
-        let width = view.frame.width
-        
         view.backgroundColor = .clear
         
         scrollView.contentSize = CGSize(width: view.frame.width * 2, height: 250)
+        
+        createUI()
+    }
+    
+    
+    func createUI() {
+        
+        let height = view.frame.height
+        let width = view.frame.width
+        
+        
         
         let firstView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 250))
         let secondView = UIView(frame: CGRect(x: view.frame.width, y: 0, width: view.frame.width, height: 250))
@@ -35,7 +43,7 @@ class ButtomSheetController: UIViewController {
                                                          width: width * 0.09,
                                                          height: width * 0.09))
         
-        sunriseImageView.image = UIImage(systemName: "sunrise")
+        sunriseImageView.image = UIImage(systemName: Symbols.sunrise)
         sunriseImageView.contentMode = .scaleAspectFit
         firstView.addSubview(sunriseImageView)
         
@@ -54,7 +62,7 @@ class ButtomSheetController: UIViewController {
                                                         y: 40,
                                                         width: width * 0.09,
                                                         height: width * 0.09))
-        sunsetImageView.image = UIImage(systemName: "sunset")
+        sunsetImageView.image = UIImage(systemName: Symbols.sunset)
         sunsetImageView.contentMode = .scaleAspectFit
         firstView.addSubview(sunsetImageView)
         
@@ -147,4 +155,5 @@ class ButtomSheetController: UIViewController {
         windDegreesLabel.textColor = UIColor(named: "AccentColor")
         firstView.addSubview(windDegreesLabel)
     }
+    
 }

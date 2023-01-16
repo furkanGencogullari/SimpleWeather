@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		14F97EF5265C2321201474CF /* Pods_Simple_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1ABFBF15282768CE91E805 /* Pods_Simple_Weather.framework */; };
-		8E4487312968722E00BE64AA /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4487302968722E00BE64AA /* CustomTextField.swift */; };
 		8E57895E2967207800E4EF2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E57895D2967207800E4EF2E /* AppDelegate.swift */; };
 		8E5789602967207800E4EF2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E57895F2967207800E4EF2E /* SceneDelegate.swift */; };
 		8E5789622967207800E4EF2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5789612967207800E4EF2E /* ViewController.swift */; };
@@ -17,11 +16,13 @@
 		8E57896A2967208000E4EF2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5789682967208000E4EF2E /* LaunchScreen.storyboard */; };
 		8E578973296721F300E4EF2E /* ButtomSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E578971296721F200E4EF2E /* ButtomSheetController.swift */; };
 		8E578974296721F300E4EF2E /* ButtomSheetController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E578972296721F200E4EF2E /* ButtomSheetController.xib */; };
+		8E9D7FEA29717BD100EC0D83 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D7FE929717BD100EC0D83 /* WeatherData.swift */; };
+		8EC5B6B82970297B003EBA05 /* WeatherEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B6B72970297B003EBA05 /* WeatherEngine.swift */; };
+		8EC5B6BA29702A55003EBA05 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B6B929702A55003EBA05 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7FF5A2155E2A34F5F611875E /* Pods-Simple Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple Weather.release.xcconfig"; path = "Target Support Files/Pods-Simple Weather/Pods-Simple Weather.release.xcconfig"; sourceTree = "<group>"; };
-		8E4487302968722E00BE64AA /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		8E57895A2967207800E4EF2E /* Simple Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E57895D2967207800E4EF2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E57895F2967207800E4EF2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +33,9 @@
 		8E57896B2967208000E4EF2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E578971296721F200E4EF2E /* ButtomSheetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtomSheetController.swift; sourceTree = "<group>"; };
 		8E578972296721F200E4EF2E /* ButtomSheetController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtomSheetController.xib; sourceTree = "<group>"; };
+		8E9D7FE929717BD100EC0D83 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		8EC5B6B72970297B003EBA05 /* WeatherEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEngine.swift; sourceTree = "<group>"; };
+		8EC5B6B929702A55003EBA05 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AE1ABFBF15282768CE91E805 /* Pods_Simple_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simple_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5AA3D19AA272FC507430BC8 /* Pods-Simple Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple Weather.debug.xcconfig"; path = "Target Support Files/Pods-Simple Weather/Pods-Simple Weather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,9 +83,9 @@
 			children = (
 				8E57895D2967207800E4EF2E /* AppDelegate.swift */,
 				8E57895F2967207800E4EF2E /* SceneDelegate.swift */,
-				8E5789612967207800E4EF2E /* ViewController.swift */,
-				8E4487302968722E00BE64AA /* CustomTextField.swift */,
-				8E578971296721F200E4EF2E /* ButtomSheetController.swift */,
+				8E9D7FE6297179C300EC0D83 /* Model */,
+				8E9D7FE729717A1A00EC0D83 /* Controller */,
+				8EC5B6B929702A55003EBA05 /* Constants.swift */,
 				8E578972296721F200E4EF2E /* ButtomSheetController.xib */,
 				8E5789632967207800E4EF2E /* Main.storyboard */,
 				8E5789662967208000E4EF2E /* Assets.xcassets */,
@@ -89,6 +93,24 @@
 				8E57896B2967208000E4EF2E /* Info.plist */,
 			);
 			path = "Simple Weather";
+			sourceTree = "<group>";
+		};
+		8E9D7FE6297179C300EC0D83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E9D7FE929717BD100EC0D83 /* WeatherData.swift */,
+				8EC5B6B72970297B003EBA05 /* WeatherEngine.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E9D7FE729717A1A00EC0D83 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E5789612967207800E4EF2E /* ViewController.swift */,
+				8E578971296721F200E4EF2E /* ButtomSheetController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		C1C0EC93D6FAAB99ABA8FFB5 /* Pods */ = {
@@ -216,11 +238,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC5B6B82970297B003EBA05 /* WeatherEngine.swift in Sources */,
 				8E5789622967207800E4EF2E /* ViewController.swift in Sources */,
 				8E57895E2967207800E4EF2E /* AppDelegate.swift in Sources */,
 				8E578973296721F300E4EF2E /* ButtomSheetController.swift in Sources */,
 				8E5789602967207800E4EF2E /* SceneDelegate.swift in Sources */,
-				8E4487312968722E00BE64AA /* CustomTextField.swift in Sources */,
+				8EC5B6BA29702A55003EBA05 /* Constants.swift in Sources */,
+				8E9D7FEA29717BD100EC0D83 /* WeatherData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

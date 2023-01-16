@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var searchTextField: UITextField!
     
+    let weatherEngine = WeatherEngine()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,6 +24,10 @@ class ViewController: UIViewController {
         
         searchTextField.layer.cornerRadius = 20
         searchTextField.placeholder = "Search"
+        
+        weatherEngine.getWeather(cityName: "istanbul")
+        
+        
         
     }
     
