@@ -30,7 +30,8 @@ struct WeatherEngine {
     }
     
     func getWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
-        let urlString = "\(weatherURL)&lat=\(latitude)&lon\(longitude)"
+        let urlString = "\(weatherURL)&lat=\(latitude)&lon=\(longitude)"
+        print(urlString)
         performRequest(urlString: urlString)
     }
     

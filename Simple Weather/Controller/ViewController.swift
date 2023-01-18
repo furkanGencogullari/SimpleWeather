@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
     
@@ -17,28 +18,44 @@ class ViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     
     var weatherEngine = WeatherEngine()
+    var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         weatherEngine.delegate2 = self
+        locationManager.delegate = self
+        
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(showMyViewControllerInACustomizedSheet))
+        
+        locationManager.requestLocation()
         
         blurView.layer.cornerRadius = 10
         blurView.clipsToBounds = true
+        blurView.isUserInteractionEnabled = true
+        blurView.addGestureRecognizer(gesture)
         
         searchTextField.layer.cornerRadius = 20
         searchTextField.placeholder = "Search"
         
-        weatherEngine.getWeather(cityName: "istanbul")
+        
     }
     
-    @IBAction func myButton(_ sender: UIButton) {
-        showMyViewControllerInACustomizedSheet()
+    @IBAction func searchButtonPressed(_ sender: UIButton) {
+        if let searchedCity = searchTextField.text {
+            weatherEngine.getWeather(cityName: searchedCity)
+        }
     }
     
     
-    func showMyViewControllerInACustomizedSheet() {
+    @IBAction func locationButtonPressed(_ sender: UIButton) {
+        locationManager.requestLocation()
+    }
+    
+    @objc func showMyViewControllerInACustomizedSheet() {
         let viewControllerToPresent = ButtomSheetController()
         if let sheet = viewControllerToPresent.sheetPresentationController {
             sheet.detents = [.custom(resolver: { context in
@@ -70,6 +87,22 @@ extension ViewController: WeatherEngineDelegate2 {
     
     func didFinishWithError(error: Error) {
         print("didFinishWithError")
+    }
+}
+
+//MARK: LocationManagerDelegate
+extension ViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            locationManager.stopUpdatingLocation()
+            let lat = location.coordinate.latitude
+            let lon = location.coordinate.longitude
+            weatherEngine.getWeather(latitude: lat, longitude: lon)
+            print("Lat: \(lat) \n Lon: \(lon)")
+        }
+    }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("ERROR \n locationManager")
     }
 }
 

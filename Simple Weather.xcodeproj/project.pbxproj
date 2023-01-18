@@ -83,13 +83,11 @@
 			children = (
 				8E57895D2967207800E4EF2E /* AppDelegate.swift */,
 				8E57895F2967207800E4EF2E /* SceneDelegate.swift */,
+				8EC5B6B929702A55003EBA05 /* Constants.swift */,
 				8E9D7FE6297179C300EC0D83 /* Model */,
 				8E9D7FE729717A1A00EC0D83 /* Controller */,
-				8EC5B6B929702A55003EBA05 /* Constants.swift */,
-				8E578972296721F200E4EF2E /* ButtomSheetController.xib */,
-				8E5789632967207800E4EF2E /* Main.storyboard */,
+				8EAA580B29781F63004F27CE /* View */,
 				8E5789662967208000E4EF2E /* Assets.xcassets */,
-				8E5789682967208000E4EF2E /* LaunchScreen.storyboard */,
 				8E57896B2967208000E4EF2E /* Info.plist */,
 			);
 			path = "Simple Weather";
@@ -112,6 +110,16 @@
 				8E578971296721F200E4EF2E /* ButtomSheetController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8EAA580B29781F63004F27CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E5789682967208000E4EF2E /* LaunchScreen.storyboard */,
+				8E5789632967207800E4EF2E /* Main.storyboard */,
+				8E578972296721F200E4EF2E /* ButtomSheetController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C1C0EC93D6FAAB99ABA8FFB5 /* Pods */ = {

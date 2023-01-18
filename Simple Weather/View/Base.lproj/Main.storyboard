@@ -37,11 +37,11 @@
                                     <color key="baseForegroundColor" name="AccentColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="myButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cTj-QA-1tE"/>
+                                    <action selector="searchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PIn-qz-ZdZ"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C7a-tm-h5g">
-                                <rect key="frame" x="20" y="79" width="303" height="40"/>
+                                <rect key="frame" x="70" y="79" width="253" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="0.27549329340852646" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="3dJ-Jl-xQ2"/>
@@ -102,10 +102,27 @@
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Neo-wA-KtX">
+                                <rect key="frame" x="20" y="79" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="4QI-yJ-0Ee"/>
+                                    <constraint firstAttribute="height" constant="40" id="QEg-9d-LON"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="egl-Pa-sbE"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="kD6-tL-jTa"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="location" catalog="system">
+                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="locationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Csc-da-pYx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="C7a-tm-h5g" firstAttribute="leading" secondItem="Neo-wA-KtX" secondAttribute="trailing" constant="10" id="2nT-IW-Hxi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1R0-N8-aYZ" secondAttribute="trailing" id="3zn-cr-hrw"/>
                             <constraint firstAttribute="bottom" secondItem="POV-LT-1hA" secondAttribute="bottom" id="6Kd-mu-UmG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Ps-HU-9pY" secondAttribute="trailing" constant="86" id="713-Wk-LKi"/>
@@ -116,7 +133,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9fh-PP-lUq" secondAttribute="trailing" constant="20" id="Kke-pQ-NEY"/>
                             <constraint firstItem="4hB-6F-oBy" firstAttribute="top" secondItem="C7a-tm-h5g" secondAttribute="bottom" constant="27" id="RWf-Pw-aZR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="50I-FV-U93" secondAttribute="trailing" constant="110" id="Wpa-oh-sC9"/>
-                            <constraint firstItem="C7a-tm-h5g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xox-Ou-gm0"/>
+                            <constraint firstItem="Neo-wA-KtX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZRh-vp-1bd"/>
                             <constraint firstItem="5Ps-HU-9pY" firstAttribute="top" secondItem="50I-FV-U93" secondAttribute="bottom" id="bXw-7I-Ckq"/>
                             <constraint firstItem="50I-FV-U93" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bu0-9S-TmV"/>
                             <constraint firstAttribute="bottom" secondItem="1R0-N8-aYZ" secondAttribute="bottom" id="dNO-fy-zWj"/>
@@ -126,6 +143,7 @@
                             <constraint firstItem="9fh-PP-lUq" firstAttribute="leading" secondItem="C7a-tm-h5g" secondAttribute="trailing" constant="10" id="qRl-6K-uNN"/>
                             <constraint firstAttribute="trailing" secondItem="POV-LT-1hA" secondAttribute="trailing" id="r8Y-QF-t84"/>
                             <constraint firstItem="POV-LT-1hA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rt2-H5-HgY"/>
+                            <constraint firstItem="Neo-wA-KtX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="tRE-sq-mjS"/>
                         </constraints>
                     </view>
                     <connections>
@@ -146,6 +164,7 @@
         <image name="backgroundGradient" width="360" height="852"/>
         <image name="cloud.bolt.rain" catalog="system" width="122" height="128"/>
         <image name="landscape" width="360" height="532"/>
+        <image name="location" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <namedColor name="AccentColor">
             <color red="0.99697250127792358" green="0.87525477198521107" blue="0.33823926276684696" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

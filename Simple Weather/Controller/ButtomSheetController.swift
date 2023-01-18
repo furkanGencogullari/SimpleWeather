@@ -45,10 +45,7 @@ class ButtomSheetController: UIViewController {
         
         scrollView.contentSize = CGSize(width: view.frame.width, height: 250)
         createUI()
-        
-
     }
-    
     
     func createUI() {
         let width = view.frame.width
@@ -192,14 +189,3 @@ extension ButtomSheetController: WeatherEngineDelegate {
     }
 }
 
-//MARK: Create UI
-extension ButtomSheetController {
-    
-
-        
-        
-
-        
-        
-
-}
