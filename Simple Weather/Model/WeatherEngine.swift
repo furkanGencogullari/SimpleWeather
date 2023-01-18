@@ -8,8 +8,21 @@
 import Foundation
 import CoreLocation
 
+protocol WeatherEngineDelegate {
+    func didUpdateWeather(weather: WeatherModel)
+    func didFinishWithError(error: Error)
+}
+
+protocol WeatherEngineDelegate2 {
+    func didUpdateWeather(weather: WeatherModel)
+    func didFinishWithError(error: Error)
+}
+
 struct WeatherEngine {
     let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=cf8dbeb7aa0cb49ab726d7a1c3a8ed74&units=metric"
+    
+    var delegate: WeatherEngineDelegate?
+    var delegate2: WeatherEngineDelegate2?
     
     func getWeather(cityName: String) {
         let urlString = "\(weatherURL)&q=\(cityName)"
@@ -30,33 +43,36 @@ struct WeatherEngine {
                     return
                 }
                 if let safeData = data {
-                    let weather = parseJSON(weatherData: safeData)
+                    if let weather = parseJSON(weatherData: safeData) {
+                        delegate?.didUpdateWeather(weather: weather)
+                        delegate2?.didUpdateWeather(weather: weather)
+                    }
                 }
             }
             task.resume()
         }
     }
     
-    func parseJSON(weatherData: Data) -> WeatherData? {
+    func parseJSON(weatherData: Data) -> WeatherModel? {
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
             
-            let weather = WeatherData(name: decodedData.name, main: decodedData.main, wind: decodedData.wind, sys: decodedData.sys)
-            
+            let weather = WeatherModel(cityName: decodedData.name,
+                                       temperature: decodedData.main.temp,
+                                       conditionId: decodedData.weather[0].id,
+                                       sunrise: decodedData.sys.sunrise,
+                                       sunset: decodedData.sys.sunset,
+                                       airPressure: decodedData.main.pressure,
+                                       humidity: decodedData.main.humidity,
+                                       windSpeed: decodedData.wind.speed,
+                                       windDirection: decodedData.wind.deg)
             return weather
-            
         } catch {
             print("ERROR \n Decoder")
         }
         return nil
     }
-    
-    
-    
-    
-    
-    
-    
-    
 }
+
+

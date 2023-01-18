@@ -6,6 +6,5 @@ target 'Simple Weather' do
   use_frameworks!
 
   # Pods for Simple Weather
-pod 'GooglePlaces', '7.1.0'
 
 end

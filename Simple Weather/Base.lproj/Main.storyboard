@@ -130,7 +130,11 @@
                     </view>
                     <connections>
                         <outlet property="blurView" destination="50I-FV-U93" id="ruG-5H-Brf"/>
+                        <outlet property="cityNameLabel" destination="5Ps-HU-9pY" id="Rml-8Z-XA0"/>
                         <outlet property="searchTextField" destination="C7a-tm-h5g" id="ICy-BN-X4T"/>
+                        <outlet property="temperatureLabel" destination="tYI-bY-UxW" id="brx-Xi-Mq8"/>
+                        <outlet property="weatherConditionImageView" destination="4hB-6F-oBy" id="gB2-zJ-auC"/>
+                        <outlet property="weatherConditionLabel" destination="gAI-Hx-BCn" id="fT9-G9-jTw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

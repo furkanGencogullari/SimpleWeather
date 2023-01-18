@@ -6,59 +6,32 @@
 	objectVersion = 55;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		0C1885900810601510E0C632060FAF26 /* GooglePlaces */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 9C94FBBEEFB700C4478289AF59ED693A /* Build configuration list for PBXAggregateTarget "GooglePlaces" */;
-			buildPhases = (
-			);
-			dependencies = (
-			);
-			name = GooglePlaces;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		281B00B5B4AC5DE3BC100FF17D48DB9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		35936B3E69F20AA0B3E7FDD0B77D5BBB /* Pods-Simple Weather-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 385F879E50CA5CA8EC31290223A39843 /* Pods-Simple Weather-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		709CAD5A726E7EBBFEA2BBA8DA35AEB7 /* Pods-Simple Weather-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D943539E8BC0626149113C91539DD673 /* Pods-Simple Weather-dummy.m */; };
+		39D6C58D6CE381F8D50FDC442CB2BD13 /* Pods-Simple Weather-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6DECC4ED9AAB1A5883DCCB3188211F /* Pods-Simple Weather-dummy.m */; };
+		53FE4103AD76F62B823067CCAF52EDD5 /* Pods-Simple Weather-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 063E16A9C18776560A4B6C28E405BC64 /* Pods-Simple Weather-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAF2D07C57A79549679A852AB2550726 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F8B0B343857BEAD1DB18BD29DF290618 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0C1885900810601510E0C632060FAF26;
-			remoteInfo = GooglePlaces;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		16DC79C055443514AA18E5DC3853D4F7 /* Pods-Simple Weather-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Simple Weather-acknowledgements.plist"; sourceTree = "<group>"; };
-		255C1207EECAC7C0CDCABA51877292AA /* Pods-Simple Weather-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Simple Weather-acknowledgements.markdown"; sourceTree = "<group>"; };
-		385F879E50CA5CA8EC31290223A39843 /* Pods-Simple Weather-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Simple Weather-umbrella.h"; sourceTree = "<group>"; };
-		4150E81439A3E3D2B8F79D17C3E3EDFD /* Pods-Simple Weather.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Simple Weather.modulemap"; sourceTree = "<group>"; };
-		6282CD96902A13B2AE5C54E6E3DAE698 /* GooglePlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlaces.debug.xcconfig; sourceTree = "<group>"; };
+		063E16A9C18776560A4B6C28E405BC64 /* Pods-Simple Weather-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Simple Weather-umbrella.h"; sourceTree = "<group>"; };
+		36A5A777400C670A3CAE39994BC3A91D /* Pods-Simple Weather-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Simple Weather-acknowledgements.markdown"; sourceTree = "<group>"; };
+		52098F236876588457A0852365A28719 /* Pods-Simple Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Simple Weather.debug.xcconfig"; sourceTree = "<group>"; };
 		6E5E33D4F19D302927CFFB44E7D1A635 /* Pods-Simple Weather */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Simple Weather"; path = Pods_Simple_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		91A42A1C4DC3F97FDBE8EE26B5024386 /* Pods-Simple Weather-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Simple Weather-Info.plist"; sourceTree = "<group>"; };
+		7E6D44815097B8F2038C16F58068C0B9 /* Pods-Simple Weather.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Simple Weather.modulemap"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AA25BE918C11BC9D60F53BC727438A0E /* Pods-Simple Weather-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Simple Weather-resources.sh"; sourceTree = "<group>"; };
-		AA5F71CE3D2C61BFB499EE0EBBE3E8C5 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
-		AD03619D7D011583FC5CE6C6200B4773 /* Pods-Simple Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Simple Weather.release.xcconfig"; sourceTree = "<group>"; };
-		D943539E8BC0626149113C91539DD673 /* Pods-Simple Weather-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Simple Weather-dummy.m"; sourceTree = "<group>"; };
-		DA7DBA1471968A670B7B63C087685F67 /* GooglePlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlaces.release.xcconfig; sourceTree = "<group>"; };
-		EA7141AB1B0B302CB330802CB47F581F /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
-		FD07EF8A5264CE9628C5744D220D8530 /* Pods-Simple Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Simple Weather.debug.xcconfig"; sourceTree = "<group>"; };
+		C847565703B11A66BE9C3759CB4CFDC5 /* Pods-Simple Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Simple Weather.release.xcconfig"; sourceTree = "<group>"; };
+		D49CC15A2A950BCF1A66224FE3714775 /* Pods-Simple Weather-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Simple Weather-acknowledgements.plist"; sourceTree = "<group>"; };
+		DC6DECC4ED9AAB1A5883DCCB3188211F /* Pods-Simple Weather-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Simple Weather-dummy.m"; sourceTree = "<group>"; };
+		ED5AC9A8A459C8B2B2977AC16ECD7ABE /* Pods-Simple Weather-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Simple Weather-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D3E62AE0DF0825D112955103C1B81247 /* Frameworks */ = {
+		BDCB34E2503E0C671D2593C5CD071D49 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				281B00B5B4AC5DE3BC100FF17D48DB9B /* Foundation.framework in Frameworks */,
+				FAF2D07C57A79549679A852AB2550726 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,38 +46,28 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		857D09760EFF43711EF51D50FDC01736 /* Support Files */ = {
+		7712B2DE34BEE67B7CAF2DFB4255D145 /* Pods-Simple Weather */ = {
 			isa = PBXGroup;
 			children = (
-				6282CD96902A13B2AE5C54E6E3DAE698 /* GooglePlaces.debug.xcconfig */,
-				DA7DBA1471968A670B7B63C087685F67 /* GooglePlaces.release.xcconfig */,
+				7E6D44815097B8F2038C16F58068C0B9 /* Pods-Simple Weather.modulemap */,
+				36A5A777400C670A3CAE39994BC3A91D /* Pods-Simple Weather-acknowledgements.markdown */,
+				D49CC15A2A950BCF1A66224FE3714775 /* Pods-Simple Weather-acknowledgements.plist */,
+				DC6DECC4ED9AAB1A5883DCCB3188211F /* Pods-Simple Weather-dummy.m */,
+				ED5AC9A8A459C8B2B2977AC16ECD7ABE /* Pods-Simple Weather-Info.plist */,
+				063E16A9C18776560A4B6C28E405BC64 /* Pods-Simple Weather-umbrella.h */,
+				52098F236876588457A0852365A28719 /* Pods-Simple Weather.debug.xcconfig */,
+				C847565703B11A66BE9C3759CB4CFDC5 /* Pods-Simple Weather.release.xcconfig */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/GooglePlaces";
+			name = "Pods-Simple Weather";
+			path = "Target Support Files/Pods-Simple Weather";
 			sourceTree = "<group>";
 		};
-		86495445BDEF960EE33346A57A5D3AAD /* Pods */ = {
+		85145270E378AAF1AA5C64D1F9EB49F6 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F26E9E4627C6B12CDB5293A55674851F /* GooglePlaces */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		A1487064E18515EEF6F13763FD810A1E /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D8F95FC9CED6F6470580F7BCB6277AEF /* Pods-Simple Weather */,
+				7712B2DE34BEE67B7CAF2DFB4255D145 /* Pods-Simple Weather */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		C8F8453F21266F8283B862F965FD7E13 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				AA5F71CE3D2C61BFB499EE0EBBE3E8C5 /* GooglePlaces.bundle */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		CB6C2B45988186D325279C211EEA2AA4 /* Products */ = {
@@ -120,9 +83,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				86495445BDEF960EE33346A57A5D3AAD /* Pods */,
 				CB6C2B45988186D325279C211EEA2AA4 /* Products */,
-				A1487064E18515EEF6F13763FD810A1E /* Targets Support Files */,
+				85145270E378AAF1AA5C64D1F9EB49F6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,50 +96,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D78998B9511E8E6F03EDD52AADE14E2B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EA7141AB1B0B302CB330802CB47F581F /* GooglePlaces.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D8F95FC9CED6F6470580F7BCB6277AEF /* Pods-Simple Weather */ = {
-			isa = PBXGroup;
-			children = (
-				4150E81439A3E3D2B8F79D17C3E3EDFD /* Pods-Simple Weather.modulemap */,
-				255C1207EECAC7C0CDCABA51877292AA /* Pods-Simple Weather-acknowledgements.markdown */,
-				16DC79C055443514AA18E5DC3853D4F7 /* Pods-Simple Weather-acknowledgements.plist */,
-				D943539E8BC0626149113C91539DD673 /* Pods-Simple Weather-dummy.m */,
-				91A42A1C4DC3F97FDBE8EE26B5024386 /* Pods-Simple Weather-Info.plist */,
-				AA25BE918C11BC9D60F53BC727438A0E /* Pods-Simple Weather-resources.sh */,
-				385F879E50CA5CA8EC31290223A39843 /* Pods-Simple Weather-umbrella.h */,
-				FD07EF8A5264CE9628C5744D220D8530 /* Pods-Simple Weather.debug.xcconfig */,
-				AD03619D7D011583FC5CE6C6200B4773 /* Pods-Simple Weather.release.xcconfig */,
-			);
-			name = "Pods-Simple Weather";
-			path = "Target Support Files/Pods-Simple Weather";
-			sourceTree = "<group>";
-		};
-		F26E9E4627C6B12CDB5293A55674851F /* GooglePlaces */ = {
-			isa = PBXGroup;
-			children = (
-				D78998B9511E8E6F03EDD52AADE14E2B /* Frameworks */,
-				C8F8453F21266F8283B862F965FD7E13 /* Resources */,
-				857D09760EFF43711EF51D50FDC01736 /* Support Files */,
-			);
-			name = GooglePlaces;
-			path = GooglePlaces;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		65194155A52F8C5AE590815186F54741 /* Headers */ = {
+		DFF44C2CEEA2B7ADEFE06543344D4DC1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35936B3E69F20AA0B3E7FDD0B77D5BBB /* Pods-Simple Weather-umbrella.h in Headers */,
+				53FE4103AD76F62B823067CCAF52EDD5 /* Pods-Simple Weather-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,17 +112,16 @@
 /* Begin PBXNativeTarget section */
 		4F73A8F7995625B6326B20BC8748C7FE /* Pods-Simple Weather */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 988B240DE4AF86D7826EABA4F0321548 /* Build configuration list for PBXNativeTarget "Pods-Simple Weather" */;
+			buildConfigurationList = 087C4DF3A1722AAFB7CBB4D44FD8183C /* Build configuration list for PBXNativeTarget "Pods-Simple Weather" */;
 			buildPhases = (
-				65194155A52F8C5AE590815186F54741 /* Headers */,
-				A6FDF657B94E61C7146958F0FC58EE33 /* Sources */,
-				D3E62AE0DF0825D112955103C1B81247 /* Frameworks */,
-				4678D3FF00CFCF0D4173291777DA82FE /* Resources */,
+				DFF44C2CEEA2B7ADEFE06543344D4DC1 /* Headers */,
+				9600D697F7F71EA2CB832C34EA74AB94 /* Sources */,
+				BDCB34E2503E0C671D2593C5CD071D49 /* Frameworks */,
+				8004675A9A0CD71619A3BF255FFF9C9E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9FD79CF58BC3D45FF3CDE6E06C54127A /* PBXTargetDependency */,
 			);
 			name = "Pods-Simple Weather";
 			productName = Pods_Simple_Weather;
@@ -225,14 +150,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0C1885900810601510E0C632060FAF26 /* GooglePlaces */,
 				4F73A8F7995625B6326B20BC8748C7FE /* Pods-Simple Weather */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4678D3FF00CFCF0D4173291777DA82FE /* Resources */ = {
+		8004675A9A0CD71619A3BF255FFF9C9E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -242,82 +166,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A6FDF657B94E61C7146958F0FC58EE33 /* Sources */ = {
+		9600D697F7F71EA2CB832C34EA74AB94 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				709CAD5A726E7EBBFEA2BBA8DA35AEB7 /* Pods-Simple Weather-dummy.m in Sources */,
+				39D6C58D6CE381F8D50FDC442CB2BD13 /* Pods-Simple Weather-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		9FD79CF58BC3D45FF3CDE6E06C54127A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GooglePlaces;
-			target = 0C1885900810601510E0C632060FAF26 /* GooglePlaces */;
-			targetProxy = F8B0B343857BEAD1DB18BD29DF290618 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		130F3729F7B60DA2C8A882702063ADB6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD03619D7D011583FC5CE6C6200B4773 /* Pods-Simple Weather.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Simple Weather/Pods-Simple Weather-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Simple Weather/Pods-Simple Weather.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		24069BB3B6E16DED8CC95987BEACAF82 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA7DBA1471968A670B7B63C087685F67 /* GooglePlaces.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		45285987FDC204B9DB7C0228892D4B3E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -384,6 +243,44 @@
 			};
 			name = Debug;
 		};
+		53BA0B07D5CBE0AAC62968B7EF24DAF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C847565703B11A66BE9C3759CB4CFDC5 /* Pods-Simple Weather.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Simple Weather/Pods-Simple Weather-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Simple Weather/Pods-Simple Weather.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		6AF9D8D0B4F4FA4695A8EEF773CD3FBC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -446,26 +343,9 @@
 			};
 			name = Release;
 		};
-		C36EC2744E968A453E8CE2CB5CCFAA85 /* Debug */ = {
+		F2F64B2F1C048122E8611F71DC9C070D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6282CD96902A13B2AE5C54E6E3DAE698 /* GooglePlaces.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		D79498FA956CDFB366FCF4F2F658022D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD07EF8A5264CE9628C5744D220D8530 /* Pods-Simple Weather.debug.xcconfig */;
+			baseConfigurationReference = 52098F236876588457A0852365A28719 /* Pods-Simple Weather.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -503,29 +383,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		087C4DF3A1722AAFB7CBB4D44FD8183C /* Build configuration list for PBXNativeTarget "Pods-Simple Weather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2F64B2F1C048122E8611F71DC9C070D /* Debug */,
+				53BA0B07D5CBE0AAC62968B7EF24DAF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				45285987FDC204B9DB7C0228892D4B3E /* Debug */,
 				6AF9D8D0B4F4FA4695A8EEF773CD3FBC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		988B240DE4AF86D7826EABA4F0321548 /* Build configuration list for PBXNativeTarget "Pods-Simple Weather" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D79498FA956CDFB366FCF4F2F658022D /* Debug */,
-				130F3729F7B60DA2C8A882702063ADB6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9C94FBBEEFB700C4478289AF59ED693A /* Build configuration list for PBXAggregateTarget "GooglePlaces" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C36EC2744E968A453E8CE2CB5CCFAA85 /* Debug */,
-				24069BB3B6E16DED8CC95987BEACAF82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
