@@ -35,14 +35,18 @@ class ButtomSheetController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
+        
         weatherEngine.delegate = self
         
         weatherEngine.getWeather(cityName: "istanbul")
         
         view.backgroundColor = .clear
         
-        scrollView.contentSize = CGSize(width: view.frame.width * 2, height: 250)
+        scrollView.contentSize = CGSize(width: view.frame.width, height: 250)
         createUI()
+        
+
     }
     
     
@@ -52,22 +56,17 @@ class ButtomSheetController: UIViewController {
         
         
         let firstView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 250))
-        let secondView = UIView(frame: CGRect(x: view.frame.width, y: 0, width: view.frame.width, height: 250))
         
         firstView.backgroundColor = .clear
-        secondView.backgroundColor = .clear
-        
         
         scrollView.addSubview(firstView)
-        scrollView.addSubview(secondView)
-        
         
         sunriseImageView.frame = CGRect(x: width * 0.20,
                                         y: 40,
                                         width: width * 0.09,
                                         height: width * 0.09)
         
-        sunriseImageView.image = UIImage(systemName: Symbols.sunrise)
+        sunriseImageView.image = UIImage(systemName: "sunrise")
         sunriseImageView.contentMode = .scaleAspectFit
         firstView.addSubview(sunriseImageView)
         
@@ -76,9 +75,8 @@ class ButtomSheetController: UIViewController {
                                                  y: 40,
                                                  width: width * 0.15,
                                                  height: width * 0.09)
-        sunriseLabel.text = "07:23"
-        sunriseLabel.font = UIFont(name: "PingFang HK Medium", size: 17)
-        sunriseLabel.textColor = UIColor(named: "AccentColor")
+        sunriseLabel.font = UIFont(name: K.brandFont, size: 17)
+        sunriseLabel.textColor = UIColor(named: K.accentColor)
         firstView.addSubview(sunriseLabel)
         
         
@@ -86,7 +84,7 @@ class ButtomSheetController: UIViewController {
                                                         y: 40,
                                                         width: width * 0.09,
                                                         height: width * 0.09)
-        sunsetImageView.image = UIImage(systemName: Symbols.sunset)
+        sunsetImageView.image = UIImage(systemName: "sunset")
         sunsetImageView.contentMode = .scaleAspectFit
         firstView.addSubview(sunsetImageView)
         
@@ -95,9 +93,8 @@ class ButtomSheetController: UIViewController {
                                                 y: 40,
                                                 width: width * 0.15,
                                                 height: width * 0.09)
-        sunsetLabel.text = "18:23"
-        sunsetLabel.font = UIFont(name: "PingFang HK Medium", size: 17)
-        sunsetLabel.textColor = UIColor(named: "AccentColor")
+        sunsetLabel.font = UIFont(name: K.brandFont, size: 17)
+        sunsetLabel.textColor = UIColor(named: K.accentColor)
         firstView.addSubview(sunsetLabel)
         
         
@@ -114,10 +111,9 @@ class ButtomSheetController: UIViewController {
                                                   y: 40 + (width * 0.09) + 20,
                                                   width: width * 0.15,
                                                   height: width * 0.09)
-        pressureLabel.text = "1014 hPa"
-        pressureLabel.font = UIFont(name: "PingFang HK Medium", size: 17)
+        pressureLabel.font = UIFont(name: K.brandFont, size: 17)
         pressureLabel.adjustsFontSizeToFitWidth = true
-        pressureLabel.textColor = UIColor(named: "AccentColor")
+        pressureLabel.textColor = UIColor(named: K.accentColor)
         firstView.addSubview(pressureLabel)
         
         
@@ -134,9 +130,8 @@ class ButtomSheetController: UIViewController {
                                                   y: 40 + (width * 0.09) + 20,
                                                   width: width * 0.15,
                                                   height: width * 0.09)
-        humidityLabel.text = "%76"
-        humidityLabel.font = UIFont(name: "PingFang HK Medium", size: 17)
-        humidityLabel.textColor = UIColor(named: "AccentColor")
+        humidityLabel.font = UIFont(name: K.brandFont, size: 17)
+        humidityLabel.textColor = UIColor(named: K.accentColor)
         firstView.addSubview(humidityLabel)
         
         
@@ -153,9 +148,8 @@ class ButtomSheetController: UIViewController {
                                                    y: 40 + (((width * 0.09) + 20) * 2),
                                                    width: width * 0.15,
                                                    height: width * 0.09)
-        windSpeedLabel.text = "1.54 m/s"
-        windSpeedLabel.font = UIFont(name: "PingFang HK Medium", size: 17)
-        windSpeedLabel.textColor = UIColor(named: "AccentColor")
+        windSpeedLabel.font = UIFont(name: K.brandFont, size: 17)
+        windSpeedLabel.textColor = UIColor(named: K.accentColor)
         windSpeedLabel.adjustsFontSizeToFitWidth = true
         firstView.addSubview(windSpeedLabel)
         
@@ -174,9 +168,8 @@ class ButtomSheetController: UIViewController {
                                                    y: 40 + (((width * 0.09) + 20) * 2),
                                                    width: width * 0.15,
                                                    height: width * 0.09)
-        windDegreesLabel.text = "150°"
-        windDegreesLabel.font = UIFont(name: "PingFang HK Medium", size: 17)
-        windDegreesLabel.textColor = UIColor(named: "AccentColor")
+        windDegreesLabel.font = UIFont(name: K.brandFont, size: 17)
+        windDegreesLabel.textColor = UIColor(named: K.accentColor)
         firstView.addSubview(windDegreesLabel)
     }
     
@@ -197,6 +190,16 @@ extension ButtomSheetController: WeatherEngineDelegate {
     func didFinishWithError(error: Error) {
         print(error.localizedDescription)
     }
+}
+
+//MARK: Create UI
+extension ButtomSheetController {
     
-    
+
+        
+        
+
+        
+        
+
 }
