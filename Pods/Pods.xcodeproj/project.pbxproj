@@ -16,10 +16,10 @@
 		063E16A9C18776560A4B6C28E405BC64 /* Pods-Simple Weather-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Simple Weather-umbrella.h"; sourceTree = "<group>"; };
 		36A5A777400C670A3CAE39994BC3A91D /* Pods-Simple Weather-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Simple Weather-acknowledgements.markdown"; sourceTree = "<group>"; };
 		52098F236876588457A0852365A28719 /* Pods-Simple Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Simple Weather.debug.xcconfig"; sourceTree = "<group>"; };
-		6E5E33D4F19D302927CFFB44E7D1A635 /* Pods-Simple Weather */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Simple Weather"; path = Pods_Simple_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E5E33D4F19D302927CFFB44E7D1A635 /* Pods_Simple_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simple_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7E6D44815097B8F2038C16F58068C0B9 /* Pods-Simple Weather.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Simple Weather.modulemap"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C847565703B11A66BE9C3759CB4CFDC5 /* Pods-Simple Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Simple Weather.release.xcconfig"; sourceTree = "<group>"; };
 		D49CC15A2A950BCF1A66224FE3714775 /* Pods-Simple Weather-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Simple Weather-acknowledgements.plist"; sourceTree = "<group>"; };
 		DC6DECC4ED9AAB1A5883DCCB3188211F /* Pods-Simple Weather-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Simple Weather-dummy.m"; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 		CB6C2B45988186D325279C211EEA2AA4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E5E33D4F19D302927CFFB44E7D1A635 /* Pods-Simple Weather */,
+				6E5E33D4F19D302927CFFB44E7D1A635 /* Pods_Simple_Weather.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,7 +125,7 @@
 			);
 			name = "Pods-Simple Weather";
 			productName = Pods_Simple_Weather;
-			productReference = 6E5E33D4F19D302927CFFB44E7D1A635 /* Pods-Simple Weather */;
+			productReference = 6E5E33D4F19D302927CFFB44E7D1A635 /* Pods_Simple_Weather.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
