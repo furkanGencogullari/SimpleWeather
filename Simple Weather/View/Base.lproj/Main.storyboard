@@ -149,6 +149,8 @@
                     <connections>
                         <outlet property="blurView" destination="50I-FV-U93" id="ruG-5H-Brf"/>
                         <outlet property="cityNameLabel" destination="5Ps-HU-9pY" id="Rml-8Z-XA0"/>
+                        <outlet property="locationButton" destination="Neo-wA-KtX" id="HSR-ix-kD7"/>
+                        <outlet property="searchButton" destination="9fh-PP-lUq" id="1fb-5i-DJj"/>
                         <outlet property="searchTextField" destination="C7a-tm-h5g" id="ICy-BN-X4T"/>
                         <outlet property="temperatureLabel" destination="tYI-bY-UxW" id="brx-Xi-Mq8"/>
                         <outlet property="weatherConditionImageView" destination="4hB-6F-oBy" id="gB2-zJ-auC"/>

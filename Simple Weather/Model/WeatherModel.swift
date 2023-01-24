@@ -80,3 +80,5 @@ struct WeatherModel {
     let windDirection: Int
     var windDirectionString: String {return "\(windDirection)°"}
 }
+
+

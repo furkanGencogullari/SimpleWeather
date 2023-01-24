@@ -13,16 +13,11 @@ protocol WeatherEngineDelegate {
     func didFinishWithError(error: Error)
 }
 
-protocol WeatherEngineDelegate2 {
-    func didUpdateWeather(weather: WeatherModel)
-    func didFinishWithError(error: Error)
-}
 
 struct WeatherEngine {
     let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=cf8dbeb7aa0cb49ab726d7a1c3a8ed74&units=metric"
     
     var delegate: WeatherEngineDelegate?
-    var delegate2: WeatherEngineDelegate2?
     
     func getWeather(cityName: String) {
         let urlString = "\(weatherURL)&q=\(cityName)"
@@ -31,7 +26,6 @@ struct WeatherEngine {
     
     func getWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
         let urlString = "\(weatherURL)&lat=\(latitude)&lon=\(longitude)"
-        print(urlString)
         performRequest(urlString: urlString)
     }
     
@@ -46,7 +40,7 @@ struct WeatherEngine {
                 if let safeData = data {
                     if let weather = parseJSON(weatherData: safeData) {
                         delegate?.didUpdateWeather(weather: weather)
-                        delegate2?.didUpdateWeather(weather: weather)
+                        
                     }
                 }
             }
@@ -68,11 +62,12 @@ struct WeatherEngine {
                                        humidity: decodedData.main.humidity,
                                        windSpeed: decodedData.wind.speed,
                                        windDirection: decodedData.wind.deg)
+            ButtomSheetController.weather = weather
             return weather
         } catch {
-            print("ERROR \n Decoder")
+            print("Decoder Error")
+            return nil
         }
-        return nil
     }
 }
 

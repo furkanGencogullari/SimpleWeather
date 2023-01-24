@@ -10,6 +10,8 @@ import CoreLocation
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var locationButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var weatherConditionLabel: UILabel!
@@ -23,36 +25,34 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        weatherEngine.delegate2 = self
+        setupUI()
+        
+        animateConditionImage()
+        
+        weatherEngine.delegate = self
         locationManager.delegate = self
         
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(showMyViewControllerInACustomizedSheet))
-        
         locationManager.requestLocation()
-        
-        blurView.layer.cornerRadius = 10
-        blurView.clipsToBounds = true
-        blurView.isUserInteractionEnabled = true
-        blurView.addGestureRecognizer(gesture)
-        
-        searchTextField.layer.cornerRadius = 20
-        searchTextField.placeholder = "Search"
-        
-        
     }
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
-        if let searchedCity = searchTextField.text {
-            weatherEngine.getWeather(cityName: searchedCity)
+        if searchTextField.text != "" {
+            if let searchedCity = searchTextField.text {
+                weatherEngine.getWeather(cityName: searchedCity)
+                searchTextField.endEditing(true)
+                searchTextField.text = nil
+            }
+        } else {
+            animateSearchButton()
+            self.present(AlertEngine.createErrorAlert(title: "Error", message: "Please enter a location."), animated: true)
         }
     }
     
-    
     @IBAction func locationButtonPressed(_ sender: UIButton) {
         locationManager.requestLocation()
+        animateLocationButton()
     }
     
     @objc func showMyViewControllerInACustomizedSheet() {
@@ -70,12 +70,25 @@ class ViewController: UIViewController {
         present(viewControllerToPresent, animated: true, completion: nil)
     }
     
-
+    func setupUI() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(showMyViewControllerInACustomizedSheet))
+        
+        blurView.layer.cornerRadius = 10
+        blurView.clipsToBounds = true
+        blurView.isUserInteractionEnabled = true
+        blurView.addGestureRecognizer(gesture)
+        
+        searchTextField.layer.cornerRadius = 20
+        searchTextField.placeholder = "Search"
+    }
+    
+    func createAlert(title: String, message: String) {
+        self.present(AlertEngine.createErrorAlert(title: "Error", message: message), animated: true)
+    }
 }
 
-
 //MARK: WeatherEngineDelegate
-extension ViewController: WeatherEngineDelegate2 {
+extension ViewController: WeatherEngineDelegate {
     func didUpdateWeather(weather: WeatherModel) {
         DispatchQueue.main.async {
             self.cityNameLabel.text = weather.cityName
@@ -86,7 +99,7 @@ extension ViewController: WeatherEngineDelegate2 {
     }
     
     func didFinishWithError(error: Error) {
-        print("didFinishWithError")
+        self.present(AlertEngine.createErrorAlert(title: "Error", error: error), animated: true)
     }
 }
 
@@ -98,13 +111,57 @@ extension ViewController: CLLocationManagerDelegate {
             let lat = location.coordinate.latitude
             let lon = location.coordinate.longitude
             weatherEngine.getWeather(latitude: lat, longitude: lon)
-            print("Lat: \(lat) \n Lon: \(lon)")
         }
     }
+    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("ERROR \n locationManager")
     }
 }
+
+//MARK: Animations
+extension ViewController {
+    func animateConditionImage(){
+        let animation = CABasicAnimation()
+        animation.keyPath = "position.y"
+        animation.fromValue = weatherConditionImageView.frame.midY
+        animation.toValue = weatherConditionImageView.frame.midY - 10
+        animation.duration = 1.5
+        animation.repeatDuration = .infinity
+        animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        animation.autoreverses = true
+        
+        weatherConditionImageView.layer.add(animation, forKey: "basic")
+    }
+    
+    func animateSearchButton() {
+        let animation = CABasicAnimation()
+        animation.keyPath = "position.y"
+        animation.fromValue = searchButton.frame.midY
+        animation.toValue = searchButton.frame.midY - 2
+        animation.duration = 0.1
+        animation.repeatCount = 2
+        animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        animation.autoreverses = true
+        
+        searchButton.layer.add(animation, forKey: "basic")
+    }
+    
+    func animateLocationButton() {
+        let animation = CABasicAnimation()
+        animation.keyPath = "position.y"
+        animation.fromValue = locationButton.frame.midY
+        animation.toValue = locationButton.frame.midY - 3
+        animation.duration = 0.5
+        animation.repeatCount = 2
+        animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        animation.autoreverses = true
+        
+        locationButton.layer.add(animation, forKey: "basic")
+    }
+}
+
+
 
 
 
